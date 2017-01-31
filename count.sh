@@ -23,3 +23,4 @@ for voidDone in $(cat "$@" | awk '{print $6}') ;do
 	let voidDones+=$(n $voidDone)
 done
 echo "试卷：$paperDones/$papers，白纸：$voidDones/$voids"
+echo "还有$[($(date -d2017-2-12 +%s)-$(date +%s))/86400+1]天"
